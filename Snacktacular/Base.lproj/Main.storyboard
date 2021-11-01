@@ -281,6 +281,11 @@
                                 <action selector="cancelButtonPressed:" destination="jpz-Vk-A3c" id="635-sL-cfc"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="rBG-aH-97t">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="jpz-Vk-A3c" id="6ma-vK-Kxg"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
