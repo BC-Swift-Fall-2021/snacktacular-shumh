@@ -239,24 +239,31 @@
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="13"/>
                                         </buttonConfiguration>
                                     </button>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZGP-1z-C6Q">
+                                        <rect key="frame" x="0.0" y="62" width="414" height="180"/>
+                                    </mapView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="NGU-JJ-Ont" secondAttribute="trailing" constant="8" id="0dq-ql-DDZ"/>
                                     <constraint firstItem="aQR-oc-dvU" firstAttribute="top" secondItem="fqT-6y-KuR" secondAttribute="bottom" constant="4" id="0ei-Tq-bXU"/>
                                     <constraint firstItem="fqT-6y-KuR" firstAttribute="top" secondItem="Ciu-Np-BfG" secondAttribute="top" constant="242" id="4DR-O5-erI"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZGP-1z-C6Q" secondAttribute="trailing" id="B5g-t1-79j"/>
                                     <constraint firstItem="deC-bx-hX1" firstAttribute="leading" secondItem="aQR-oc-dvU" secondAttribute="trailing" constant="8" id="Baz-27-9Iw"/>
                                     <constraint firstItem="fqT-6y-KuR" firstAttribute="leading" secondItem="Ciu-Np-BfG" secondAttribute="leading" id="Bvq-3F-aHl"/>
                                     <constraint firstAttribute="trailing" secondItem="fqT-6y-KuR" secondAttribute="trailing" id="EqH-8p-mqA"/>
                                     <constraint firstAttribute="trailing" secondItem="deC-bx-hX1" secondAttribute="trailing" constant="8" id="FFs-M1-rBl"/>
                                     <constraint firstAttribute="trailing" secondItem="7P6-p5-Dfs" secondAttribute="trailing" constant="8" id="HXH-Yg-mzg"/>
                                     <constraint firstItem="7P6-p5-Dfs" firstAttribute="leading" secondItem="Ciu-Np-BfG" secondAttribute="leading" constant="8" id="Hb1-iS-rIg"/>
+                                    <constraint firstItem="fqT-6y-KuR" firstAttribute="top" secondItem="ZGP-1z-C6Q" secondAttribute="bottom" id="Ixc-da-bhU"/>
+                                    <constraint firstItem="ZGP-1z-C6Q" firstAttribute="leading" secondItem="Ciu-Np-BfG" secondAttribute="leading" id="Sno-QD-IIO"/>
                                     <constraint firstItem="IQb-uh-apP" firstAttribute="top" secondItem="fqT-6y-KuR" secondAttribute="bottom" constant="6" id="XTQ-DH-3GQ"/>
                                     <constraint firstItem="deC-bx-hX1" firstAttribute="top" secondItem="fqT-6y-KuR" secondAttribute="bottom" constant="4" id="Xtm-gE-6nX"/>
                                     <constraint firstItem="7P6-p5-Dfs" firstAttribute="top" secondItem="Ciu-Np-BfG" secondAttribute="top" constant="8" id="ZDY-EI-Ebt"/>
                                     <constraint firstItem="IQb-uh-apP" firstAttribute="leading" secondItem="jmb-W8-w73" secondAttribute="trailing" id="ZhO-uV-Obp"/>
                                     <constraint firstItem="NGU-JJ-Ont" firstAttribute="leading" secondItem="Ciu-Np-BfG" secondAttribute="leading" constant="8" id="eF5-Gv-FO7"/>
                                     <constraint firstItem="NGU-JJ-Ont" firstAttribute="top" secondItem="7P6-p5-Dfs" secondAttribute="bottom" constant="2" id="lgy-aI-Kbv"/>
+                                    <constraint firstItem="ZGP-1z-C6Q" firstAttribute="top" secondItem="NGU-JJ-Ont" secondAttribute="bottom" constant="2" id="oVz-NF-x13"/>
                                     <constraint firstItem="jmb-W8-w73" firstAttribute="leading" secondItem="Ciu-Np-BfG" secondAttribute="leading" constant="8" id="p1y-wA-sNv"/>
                                     <constraint firstAttribute="height" constant="380" id="rhf-hg-xsj"/>
                                     <constraint firstItem="jmb-W8-w73" firstAttribute="top" secondItem="fqT-6y-KuR" secondAttribute="bottom" constant="8" id="yQq-C8-CCP"/>
@@ -294,6 +301,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addressTextField" destination="NGU-JJ-Ont" id="FVI-aB-cUK"/>
+                        <outlet property="mapView" destination="ZGP-1z-C6Q" id="b4g-9u-xe7"/>
                         <outlet property="nameTextField" destination="7P6-p5-Dfs" id="bNA-MS-Gww"/>
                         <outlet property="ratingLabel" destination="IQb-uh-apP" id="oFo-jW-xs8"/>
                     </connections>
