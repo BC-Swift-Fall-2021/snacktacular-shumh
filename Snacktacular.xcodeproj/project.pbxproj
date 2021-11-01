@@ -10,6 +10,7 @@
 		5C3D6894272F801200A0875D /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3D6893272F801200A0875D /* Spot.swift */; };
 		5C3D6896272FAC9500A0875D /* UIViewController+alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3D6895272FAC9500A0875D /* UIViewController+alert.swift */; };
 		5C3D68982730260E00A0875D /* Spots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3D68972730260E00A0875D /* Spots.swift */; };
+		5C3D689A2730387A00A0875D /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3D68992730387A00A0875D /* APIKeys.swift */; };
 		5C987880272ED304005B4D07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C98787F272ED304005B4D07 /* AppDelegate.swift */; };
 		5C987882272ED304005B4D07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C987881272ED304005B4D07 /* SceneDelegate.swift */; };
 		5C987884272ED304005B4D07 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C987883272ED304005B4D07 /* LoginViewController.swift */; };
@@ -28,6 +29,7 @@
 		5C3D6893272F801200A0875D /* Spot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spot.swift; sourceTree = "<group>"; };
 		5C3D6895272FAC9500A0875D /* UIViewController+alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+alert.swift"; sourceTree = "<group>"; };
 		5C3D68972730260E00A0875D /* Spots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spots.swift; sourceTree = "<group>"; };
+		5C3D68992730387A00A0875D /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		5C98787C272ED304005B4D07 /* Snacktacular.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snacktacular.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C98787F272ED304005B4D07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C987881272ED304005B4D07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				5C987897272EE900005B4D07 /* SpotTableViewCell.swift */,
 				5C987899272EED12005B4D07 /* SpotDetailViewController.swift */,
 				5C3D6895272FAC9500A0875D /* UIViewController+alert.swift */,
+				5C3D68992730387A00A0875D /* APIKeys.swift */,
 				5C987885272ED304005B4D07 /* Main.storyboard */,
 				5C987888272ED306005B4D07 /* Assets.xcassets */,
 				5C98788A272ED306005B4D07 /* LaunchScreen.storyboard */,
@@ -252,6 +255,7 @@
 				5C98789A272EED12005B4D07 /* SpotDetailViewController.swift in Sources */,
 				5C3D68982730260E00A0875D /* Spots.swift in Sources */,
 				5C987898272EE900005B4D07 /* SpotTableViewCell.swift in Sources */,
+				5C3D689A2730387A00A0875D /* APIKeys.swift in Sources */,
 				5C3D6894272F801200A0875D /* Spot.swift in Sources */,
 				5C987882272ED304005B4D07 /* SceneDelegate.swift in Sources */,
 				5C3D6896272FAC9500A0875D /* UIViewController+alert.swift in Sources */,
