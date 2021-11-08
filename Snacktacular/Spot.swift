@@ -16,7 +16,7 @@ class Spot: NSObject, MKAnnotation{
     var averageRating: Double
     var numberOfReviews: Int
     var postingUserID: String
-    var documentId: String
+    var documentID: String
     
     var dictionary: [String: Any] {
         return ["name":name, "address":address, "latitude": latitude, "longitude": longitude, "averageRating":averageRating, "numberOfReviews":numberOfReviews, "postingUserID":postingUserID]
@@ -49,7 +49,7 @@ class Spot: NSObject, MKAnnotation{
         self.averageRating = averageRating
         self.numberOfReviews = numberOfReviews
         self.postingUserID = postingUserID
-        self.documentId = documentID
+        self.documentID = documentID
     }
     
     convenience override init() {
@@ -79,26 +79,26 @@ class Spot: NSObject, MKAnnotation{
         // Create the dictionary representing data we want to save
         let dataToSave: [String: Any] = self.dictionary
         // If we HAVE saved a record, we will have an ID. Otherwise, .addDocument will create one.
-        if self.documentId == "" {
+        if self.documentID == "" {
             var ref: DocumentReference? = nil
             ref = db.collection("spots").addDocument(data: dataToSave) { (error) in
                 guard error == nil else {
                     print("ERROR: adding document \(error!.localizedDescription)")
                     return completion(false)
                 }
-                self.documentId = ref!.documentID
-                print("Added document: \(self.documentId)") // It worked!
+                self.documentID = ref!.documentID
+                print("Added document: \(self.documentID)") // It worked!
                 completion(true)
             }
         } else {
-            let ref = db.collection("spots").document(self.documentId)
+            let ref = db.collection("spots").document(self.documentID)
             ref.setData(dataToSave) { (error) in
                 guard error == nil else {
                     print("ERROR: updating document \(error!.localizedDescription)")
                     return completion(false)
                 }
-                self.documentId = ref.documentID
-                print("Updated document: \(self.documentId)") // It worked!
+                self.documentID = ref.documentID
+                print("Updated document: \(self.documentID)") // It worked!
                 completion(true)
             }
         }
