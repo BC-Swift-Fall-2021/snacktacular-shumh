@@ -34,5 +34,9 @@
 	</dict>
 	<key>UIStatusBarStyle</key>
 	<string>UIStatusBarStyleLightContent</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>The app will need the device location in order to determine the distance from a spot to the device, and to plotn the user&apos;s location on a map.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>The app will need the device location in order to determine the distance from a spot to the device, and to plotn the user&apos;s location on a map.</string>
 </dict>
 </plist>
