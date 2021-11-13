@@ -164,11 +164,15 @@
                                     <subviews>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Restaurant Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7P6-p5-Dfs">
                                             <rect key="frame" x="8" y="8" width="398" height="33"/>
+                                            <color key="backgroundColor" name="UI Element Background"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="33" id="giF-Kd-5nU"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="24"/>
                                             <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <action selector="nameFieldChanged:" destination="jpz-Vk-A3c" eventType="editingChanged" id="TPT-kR-KeA"/>
+                                            </connections>
                                         </textField>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="address" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NGU-JJ-Ont">
                                             <rect key="frame" x="8" y="43" width="398" height="17"/>
@@ -397,13 +401,13 @@
                             </connections>
                         </barButtonItem>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" id="A4f-aA-2bj">
+                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="A4f-aA-2bj">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="POE-se-Wrc">
                             <connections>
                                 <action selector="cancelButtonPressed:" destination="jpz-Vk-A3c" id="635-sL-cfc"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="rBG-aH-97t">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="rBG-aH-97t">
                             <connections>
                                 <action selector="saveButtonPressed:" destination="jpz-Vk-A3c" id="6ma-vK-Kxg"/>
                             </connections>
@@ -412,9 +416,11 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addressTextField" destination="NGU-JJ-Ont" id="FVI-aB-cUK"/>
+                        <outlet property="cancelBarButton" destination="POE-se-Wrc" id="hM2-fC-QCM"/>
                         <outlet property="mapView" destination="ZGP-1z-C6Q" id="b4g-9u-xe7"/>
                         <outlet property="nameTextField" destination="7P6-p5-Dfs" id="bNA-MS-Gww"/>
                         <outlet property="ratingLabel" destination="IQb-uh-apP" id="oFo-jW-xs8"/>
+                        <outlet property="saveBarButton" destination="rBG-aH-97t" id="dOR-xz-Exu"/>
                         <outlet property="tableView" destination="aog-3v-mfe" id="qYD-ID-pi9"/>
                         <segue destination="vuv-j7-Dp2" kind="presentation" identifier="AddReview" modalPresentationStyle="fullScreen" id="3Te-lo-47z"/>
                     </connections>
