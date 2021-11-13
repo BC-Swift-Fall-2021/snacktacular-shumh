@@ -25,6 +25,8 @@
 		5C987896272EE48C005B4D07 /* SpotListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C987895272EE48C005B4D07 /* SpotListViewController.swift */; };
 		5C987898272EE900005B4D07 /* SpotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C987897272EE900005B4D07 /* SpotTableViewCell.swift */; };
 		5C98789A272EED12005B4D07 /* SpotDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C987899272EED12005B4D07 /* SpotDetailViewController.swift */; };
+		5CBD0C87274013A300422782 /* UIView+addBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBD0C86274013A300422782 /* UIView+addBorder.swift */; };
+		5CBD0C892740145700422782 /* UIBarButtonItem+hide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBD0C882740145700422782 /* UIBarButtonItem+hide.swift */; };
 		E5202E8DAC33037EAE9DA85F /* Pods_Snacktacular.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A4F3FEA45962C32E59C854E /* Pods_Snacktacular.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +52,8 @@
 		5C987895272EE48C005B4D07 /* SpotListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotListViewController.swift; sourceTree = "<group>"; };
 		5C987897272EE900005B4D07 /* SpotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotTableViewCell.swift; sourceTree = "<group>"; };
 		5C987899272EED12005B4D07 /* SpotDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotDetailViewController.swift; sourceTree = "<group>"; };
+		5CBD0C86274013A300422782 /* UIView+addBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+addBorder.swift"; sourceTree = "<group>"; };
+		5CBD0C882740145700422782 /* UIBarButtonItem+hide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+hide.swift"; sourceTree = "<group>"; };
 		6A4F3FEA45962C32E59C854E /* Pods_Snacktacular.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Snacktacular.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F7009A3B1472146A4CC2007 /* Pods-Snacktacular.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snacktacular.debug.xcconfig"; path = "Target Support Files/Pods-Snacktacular/Pods-Snacktacular.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,6 +113,8 @@
 				5C1A727E2739BB1300FD941A /* SpotReviewTableViewCell.swift */,
 				5C1A72782738E40C00FD941A /* ReviewTableViewController.swift */,
 				5C3D6895272FAC9500A0875D /* UIViewController+alert.swift */,
+				5CBD0C86274013A300422782 /* UIView+addBorder.swift */,
+				5CBD0C882740145700422782 /* UIBarButtonItem+hide.swift */,
 				5C3D68992730387A00A0875D /* APIKeys.swift */,
 				5C987885272ED304005B4D07 /* Main.storyboard */,
 				5C987888272ED306005B4D07 /* Assets.xcassets */,
@@ -269,12 +275,14 @@
 				5C1A72792738E40C00FD941A /* ReviewTableViewController.swift in Sources */,
 				5C1A727B2739682400FD941A /* Review.swift in Sources */,
 				5C3D68982730260E00A0875D /* Spots.swift in Sources */,
+				5CBD0C892740145700422782 /* UIBarButtonItem+hide.swift in Sources */,
 				5C987898272EE900005B4D07 /* SpotTableViewCell.swift in Sources */,
 				5C1A727F2739BB1300FD941A /* SpotReviewTableViewCell.swift in Sources */,
 				5C3D689A2730387A00A0875D /* APIKeys.swift in Sources */,
 				5C3D6894272F801200A0875D /* Spot.swift in Sources */,
 				5C987882272ED304005B4D07 /* SceneDelegate.swift in Sources */,
 				5C3D6896272FAC9500A0875D /* UIViewController+alert.swift in Sources */,
+				5CBD0C87274013A300422782 /* UIView+addBorder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
