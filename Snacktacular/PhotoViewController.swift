@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import SDWebImage
 
 private let dateFormatter: DateFormatter = {
     let dateFormatter = DateFormatter()
@@ -49,7 +50,6 @@ class PhotoViewController: UIViewController {
         postedByLabel.text = "by: \(photo.photoUserEmail)"
         dateLabel.text = "on: \(dateFormatter.string(from: photo.date))"
         descriptionTextView.text = photo.description
-        photoImageView.image = photo.image
         
         if photo.documentID == "" { // this is a new photo
             addBordersToEditableObjects()
@@ -67,6 +67,14 @@ class PhotoViewController: UIViewController {
                 descriptionTextView.backgroundColor = .white
             }
         }
+        guard let url = URL(string: photo.photoURL) else {
+            // Then this must be a new image, so get the image from teh photo.image passed in rather than from the url
+            photoImageView.image = photo.image
+            return
+        }
+        photoImageView.sd_imageTransition = .fade
+        photoImageView.sd_imageTransition?.duration = 0.5
+        photoImageView.sd_setImage(with: url)
     }
     
     func updateFromUserInterface () {

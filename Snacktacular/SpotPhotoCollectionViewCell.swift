@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class SpotPhotoCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var photoImageVIew: UIImageView!
@@ -13,13 +14,19 @@ class SpotPhotoCollectionViewCell: UICollectionViewCell {
     var spot: Spot!
     var photo: Photo! {
         didSet {
-            photo.loadImage(spot: spot) { (success) in
-                if success {
-                    self.photoImageVIew.image = self.photo.image
-                } else {
-                    print("ERROR")
+            if let url = URL(string: self.photo.photoURL) {
+                self.photoImageVIew.sd_imageTransition = .fade
+                self.photoImageVIew.sd_imageTransition?.duration = 0.2
+                self.photoImageVIew.sd_setImage(with: url)
+            } else {
+                print("URL did not work")
+                self.photo.loadImage(spot: self.spot) { success in
+                    self.photo.saveData(spot: self.spot) { success in
+                        print("Image updated with URL")
+                    }
                 }
             }
+
         }
     }
 }
