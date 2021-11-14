@@ -49,4 +49,53 @@ class Photo {
         self.init(image: UIImage(),description: description,photoUserID: photoUserID,photoUserEmail: photoUserEmail,date: date,photoURL: photoURL,documentID: "")
     }
     
+    func saveData(spot: Spot, completion: @escaping (Bool) -> ()) {
+        let db = Firestore.firestore()
+        let storage = Storage.storage()
+        
+        guard let photoData = self.image.jpegData(compressionQuality: 0.5) else {
+            print("Could not convert photo.image to Data")
+            return
+        }
+        
+        let uploadMetaData = StorageMetadata()
+        uploadMetaData.contentType = "image/jpeg"
+        
+        if documentID == "" {
+            documentID = UUID().uuidString
+        }
+        
+        let storageRef = storage.reference().child(spot.documentID).child(documentID)
+        
+        let uploadTask = storageRef.putData(photoData, metadata: uploadMetaData) {(metadata,error) in
+            if let error = error {
+                print("ERROR")
+            }
+        }
+        
+        uploadTask.observe(.success) { (snapshot) in
+            print("Uplaod to FIrebase storage was successful")
+
+            // Create the dictionary representing data we want to save
+            let dataToSave: [String: Any] = self.dictionary
+            let ref = db.collection("spots").document(spot.documentID).collection("photos").document(self.documentID)
+            ref.setData(dataToSave) { (error) in
+                guard error == nil else {
+                    print("ERROR: updating document \(error!.localizedDescription)")
+                    return completion(false)
+                }
+                self.documentID = ref.documentID
+                print("Updated document: \(self.documentID) in spot \(spot.documentID)") // It worked!
+                completion(true)
+            }
+        }
+        
+        uploadTask.observe(.failure) { (snapshot) in
+            if let error = snapshot.error {
+                print("ERROR")
+            }
+            completion(false)
+        }
+    }
+    
 }
