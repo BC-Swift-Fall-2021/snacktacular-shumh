@@ -38,5 +38,9 @@
 	<string>The app will need the device location in order to determine the distance from a spot to the device, and to plotn the user&apos;s location on a map.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>The app will need the device location in order to determine the distance from a spot to the device, and to plotn the user&apos;s location on a map.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Snacktacular will need access to your camera if you&apos;d like to add a photo</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Snacktacular will need access to your Photo Library if you&apos;d like to add a photo</string>
 </dict>
 </plist>
