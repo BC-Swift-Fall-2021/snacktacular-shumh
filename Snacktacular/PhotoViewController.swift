@@ -42,7 +42,7 @@ class PhotoViewController: UIViewController {
         if photo == nil {
             photo = Photo()
         }
-
+        updateUserInterface()
     }
     
     func updateUserInterface () {
