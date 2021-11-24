@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C0F8F24274EEEA10023E168 /* SnackUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0F8F23274EEEA10023E168 /* SnackUser.swift */; };
 		5C1A72792738E40C00FD941A /* ReviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1A72782738E40C00FD941A /* ReviewTableViewController.swift */; };
 		5C1A727B2739682400FD941A /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1A727A2739682400FD941A /* Review.swift */; };
 		5C1A727D2739713B00FD941A /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1A727C2739713B00FD941A /* Reviews.swift */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		2D93F3D3902A07B6FE0D43FB /* Pods-Snacktacular.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snacktacular.release.xcconfig"; path = "Target Support Files/Pods-Snacktacular/Pods-Snacktacular.release.xcconfig"; sourceTree = "<group>"; };
+		5C0F8F23274EEEA10023E168 /* SnackUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackUser.swift; sourceTree = "<group>"; };
 		5C1A72782738E40C00FD941A /* ReviewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewController.swift; sourceTree = "<group>"; };
 		5C1A727A2739682400FD941A /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		5C1A727C2739713B00FD941A /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				5C1A727C2739713B00FD941A /* Reviews.swift */,
 				5CBD0C8C2741777E00422782 /* Photo.swift */,
 				5CBD0C8E27419B6C00422782 /* Photos.swift */,
+				5C0F8F23274EEEA10023E168 /* SnackUser.swift */,
 				5C3D68972730260E00A0875D /* Spots.swift */,
 				5C987883272ED304005B4D07 /* LoginViewController.swift */,
 				5C987895272EE48C005B4D07 /* SpotListViewController.swift */,
@@ -296,6 +299,7 @@
 				5C3D689A2730387A00A0875D /* APIKeys.swift in Sources */,
 				5C3D6894272F801200A0875D /* Spot.swift in Sources */,
 				5C987882272ED304005B4D07 /* SceneDelegate.swift in Sources */,
+				5C0F8F24274EEEA10023E168 /* SnackUser.swift in Sources */,
 				5CBD0C9327419EF100422782 /* SpotPhotoCollectionViewCell.swift in Sources */,
 				5C3D6896272FAC9500A0875D /* UIViewController+alert.swift in Sources */,
 				5CBD0C87274013A300422782 /* UIView+addBorder.swift in Sources */,
