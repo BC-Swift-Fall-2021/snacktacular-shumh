@@ -69,7 +69,7 @@ class Photo {
         
         let uploadTask = storageRef.putData(photoData, metadata: uploadMetaData) {(metadata,error) in
             if let error = error {
-                print("ERROR")
+                print("😡 ERROR: uplaod for ref \(uploadMetaData) failed. \(error.localizedDescription)")
             }
         }
         
@@ -104,7 +104,7 @@ class Photo {
         
         uploadTask.observe(.failure) { (snapshot) in
             if let error = snapshot.error {
-                print("ERROR")
+                print("😡 ERROR: \(error.localizedDescription)")
             }
             completion(false)
         }
@@ -119,7 +119,7 @@ class Photo {
         let storageRef = storage.reference().child(spot.documentID).child(documentID)
         storageRef.getData(maxSize: 25 * 1024 * 1024) { (data, error) in
             if let error = error {
-                print("ERROR")
+                print("ERROR: \(error.localizedDescription)")
                 return completion(false)
             } else {
                 self.image = UIImage(data: data!) ?? UIImage()
@@ -127,5 +127,36 @@ class Photo {
             }
         }
                 
+    }
+    
+    func deleteData(spot: Spot, completion: @escaping (Bool) -> ()) {
+        let db = Firestore.firestore()
+        db.collection("spots").document(spot.documentID).collection("photos").document(documentID).delete { (error) in
+            if let error = error {
+                print("ERROR deleting photo documentID \(self.documentID). Error: \(error.localizedDescription)")
+                completion(false)
+            } else {
+                self.deleteImage(spot: spot)
+                print("Successfully deleted document \(self.documentID)")
+                    completion(true)
+                
+            }
+        }
+    }
+    
+    private func deleteImage (spot: Spot){
+        guard spot.documentID != "" else {
+            print("error")
+            return
+        }
+        let storage = Storage.storage()
+        let storageRef = storage.reference().child(spot.documentID).child(documentID)
+        storageRef.delete { error in
+            if let error = error {
+                print("error \(error.localizedDescription)")
+            } else {
+                print("Photo successfully deleted")
+            }
+        }
     }
 }

@@ -124,7 +124,7 @@ class Spot: NSObject, MKAnnotation{
             let spotRef = db.collection("spots ").document(self.documentID)
             spotRef.setData(dataToSave) {(error) in
                 if let error = error {
-                    print("ERROR ")
+                    print("😡 ERROR: updating document \(self.documentID) in spot after changing averageReview & numberOfReviews info \(error.localizedDescription)")
                     completed()
                 } else {
                     print("New Average \(self.averageRating)")

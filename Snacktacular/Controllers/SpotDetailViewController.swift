@@ -118,7 +118,7 @@ class SpotDetailViewController: UIViewController {
             destination.photo = photos.photoArray[selectedIndexPath.row]
             destination.spot = spot
         default:
-            print("Couldn't find a case for segue identifier \(segue.identifier). This should not have happened!")
+            print("Couldn't find a case for segue identifier \(segue.identifier!). This should not have happened!")
             
         }
     }
